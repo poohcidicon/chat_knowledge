@@ -10,7 +10,6 @@ import { MessageSquare, Send, Trash2 } from 'lucide-react';
 // import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 // import { Input } from '@/components/ui/input';
 // import Link from 'next/link';
-import Login from '@/components/auth/Login';
 
 interface Message {
   id: string;
@@ -258,25 +257,6 @@ export default function Home () {
           </div>
         )}
       </main>
-      {/* <Dialog open={isDeleteDialogOpen} onOpenChange={(e) => setIsDeleteDialogOpen(e)}>
-        <DialogContent className="[&>button]:hidden">
-          <DialogHeader>
-            <DialogTitle>Sign in</DialogTitle>
-          </DialogHeader> 
-          <div className="flex flex-col space-y-2 gap-2 px-6 py-4">
-            <Input
-              placeholder="Username"
-            />
-            <Input
-              placeholder="Password"
-            />
-            <Button>Sign in</Button>
-            <Button variant="outline" type='button'>Sign up</Button>
-            <Link href='#'>Forgot password?</Link>
-          </div>
-        </DialogContent>
-      </Dialog> */}
-      <Login />
     </div>
   )
 }
