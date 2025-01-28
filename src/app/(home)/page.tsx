@@ -7,9 +7,10 @@ import { useRef } from 'react';
 import { Textarea } from '@/components/ui/textarea';
 import { useEffect } from 'react';
 import { MessageSquare, Send, Trash2 } from 'lucide-react';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Input } from '@/components/ui/input';
-import Link from 'next/link';
+// import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
+// import { Input } from '@/components/ui/input';
+// import Link from 'next/link';
+import Login from '@/components/auth/Login';
 
 interface Message {
   id: string;
@@ -55,7 +56,7 @@ export default function Home () {
   const [isTyping, setIsTyping] = useState(false);
   const [input, setInput] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(true);
+  // const [isDeleteDialogOpen, setIsDeleteDialogOpen] = useState(true);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -257,7 +258,7 @@ export default function Home () {
           </div>
         )}
       </main>
-      <Dialog open={isDeleteDialogOpen} onOpenChange={(e) => setIsDeleteDialogOpen(e)}>
+      {/* <Dialog open={isDeleteDialogOpen} onOpenChange={(e) => setIsDeleteDialogOpen(e)}>
         <DialogContent className="[&>button]:hidden">
           <DialogHeader>
             <DialogTitle>Sign in</DialogTitle>
@@ -274,7 +275,8 @@ export default function Home () {
             <Link href='#'>Forgot password?</Link>
           </div>
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
+      <Login />
     </div>
   )
 }
